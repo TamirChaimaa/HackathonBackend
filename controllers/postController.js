@@ -82,7 +82,8 @@ router.delete('/:id', async (req, res) => {
         }
 
         // Supprimer le post
-        await post.remove();
+      await post.deleteOne();
+       
 
         res.status(200).json({ message: "Post supprimé avec succès" });
     } catch (error) {
